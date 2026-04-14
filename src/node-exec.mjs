@@ -11,6 +11,7 @@ const command = 'ls -la';
 const cwd = process.cwd();
 
 //解析命令和参数
+// spawn 可以制定在cwd这个目录下执行命令，创建一个子进程来跑
 const [cmd,...args] = command.split(' ');
 const child = spawn(cmd,args,{
     cwd,
